@@ -18,20 +18,20 @@ int function2(int a,int n){
 		return function2(a,n/2)*function2(a,n/2);
 	  }
   else {
-		return a*function2(a,n/2)*function2(a,n/2);
+		return a*function2(a,n/2)*function2(a,n/2); // There is a truncation here that I cannot solve
 	  }
 }
 
 int main(){
 	int a;
 	int n;
-	cout<<"Enter the base: "<<endl;
+	cout<<"Enter the base value: "<<endl;
 	cin>>a;
-	cout<<"Enter the exponent: "<<endl;
+	cout<<"Enter the exponent value: "<<endl;
 	cin>>n;
 	cout<<"The result using the first recursive function is "<<function1(a,n)<<endl;
-	cout<<"This function was iterate "<<counter1<<" times"<<endl;
+	cout<<"This function was iterate over "<<counter1<<" times"<<endl;
 	cout<<"The result using the second recursive function is "<<function2(a,n)<<endl;
-	cout<<"This function was iterate "<<counter2<<" times"<<endl;
+	cout<<"This function was iterate over "<<counter2<<" times"<<endl;
 	return 0;
 }
